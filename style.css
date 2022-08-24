@@ -1,7 +1,8 @@
 
 
-/*-------------------------- Jafar Start here----------------------------- */
+/* emad */
 
+/* jafar */
 
 
 
@@ -16,41 +17,143 @@
 
 /* hero Section Start here*/
 
-body{
-    background-color: darkgrey;
+/* https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 */
+/* https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 */
+/* https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 */
+/* https://view.com/sites/default/files/image_crop_hero/solutions-commercial-office-hero-image-netflix-DESKTOP-LARGE.jpg */
+/* https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80 */
 
-}
 
 .heroSection{
+    color: white;
     height: 100vh;
     width: 100vw;
     background:linear-gradient(
-        rgba(0, 0, 0, 0.4), 
-        rgba(0, 0, 0, 0.4)
-      ),url("./heroimg.PNG");
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)
+      ),url("https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+      background-size:cover;
+      display: flex;
       background-attachment: fixed;
       background-position:center ;
     opacity: 100%;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     flex-wrap: wrap;
+    animation: shrink 1.5s;
 
 
 }
+
+
+/* simple navbar hover effect start here */
+
+
+
+/* .Navbar{
+    display: flex;
+    justify-content: space-evenly;
+    animation: fadeIn 0.5s;
+    padding: 1.5rem;
+    font-weight: 400;
+    font-size: larger;
+
+}
+
+
+
+
+a {
+	color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+
+a{
+    text-decoration: none;
+    font-size: larger;
+}
+
+
+li{
+    list-style: none;
+} */
+
+
+
+
+
+
+/* simple navbar hover effect end here */
+
+
+
+
+
+
+
+
+
+
 
 .headingAndDescription{
     margin-left: 5rem;
+    animation: fadeIn 2.5s;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
 }
 .callToActionButton{
     margin: 1rem;
+    width: 15rem;
+    height: 3rem;
+    font-size: larger;
+    font-weight: bold;
+    animation: fadeIn 2.5s;
 }
+
+.callToActionButton:hover{
+    /* box-shadow: #fff; */
+    box-shadow : 0 0 15px 5px rgba(255, 255, 255, 1);
+}
+
+
 .heroHeading{
     margin: 1rem;
     margin-bottom: 1.5rem;
+    animation: fadeIn 2.5s;
+    font-weight: 700;
+
 }
 .heroDescription{
    max-width: 50rem;
    margin: 1rem;
+   line-height: 2.8rem;
+   animation: fadeIn 2.5s;
+
+
 }
 
 /* hero Section End here*/
@@ -116,6 +219,10 @@ transform: rotate(-225deg);
     border-radius: 10px;
     overflow: hidden;
     display: none;
+    animation: fadeIn 0.5s;
+
+    
+
 }
 
 .dropdown .options div{
@@ -132,14 +239,87 @@ cursor: pointer;
 
 .dropdown.active .options{
 display: block;
+
+
+
 }
 
-/* Dropdown End here*/
+
+
+.dropdown-header
+{
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    padding: 1rem;
+    background-color: grey;
+
+}
+
+
+
+
+    /* Dropdown End here*/
+
+
+
+
+    /* hero animation start here */
+
+@keyframes shrink {
+    from{
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from{
+         opacity: 0;
+         transform:translateY(-2em)
+    }
+    to {
+         opacity: 1;
+         transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeout {
+    from{
+         opacity: 0;
+         transform:translateY(0)
+    }
+    to {
+         opacity: 1;
+         transform: translateY(2em);
+    }
+}
+
+
+        /* hero animation End here */
+
+
+/* Jafar End */
 
 
 
 
 
-/*-------------------------- Jafar End here----------------------------- */
+
+
+
+
+
+/* manar */
+
+/* laith */
+
+/* duaa */
+
+
+
 
 
