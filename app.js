@@ -155,6 +155,35 @@ function colorClass(priority) {
 
 // jafar
 
+
+
+
+function displayCards(filteredArray) {
+
+  filteredArray.forEach((ele) => {
+    if(ele.style.display == "none"){
+      ele.style.display = "block";
+
+    }else{
+    ele.style.display = "none";
+  }  })
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //when click on dropdown data show it instead of the placeholder "filter"
 
 console.log(allCards);
@@ -181,13 +210,12 @@ dropdown2.onclick = function () {
 };
 
 let inComplete = document.getElementById("InCompleteDropdown");
-var filteredArray = [];
 inComplete.addEventListener("click", (event) => {
   event.preventDefault();
 
   let otherFilterValue = document.querySelector(".textBox1").value;
-  firstCondition = document.querySelector(".textBox1").value;
-  secondCondition = document.querySelector(".textBox2").value;
+  // let firstCondition = document.querySelector(".textBox1").value;
+  //  let secondCondition = document.querySelector(".textBox2").value;
 
   
 
