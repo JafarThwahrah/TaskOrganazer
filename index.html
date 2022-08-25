@@ -15,9 +15,17 @@
   </head>
   <body>
     <header>
-      <!-- emad - start -->
-
-      <!-- emad - end -->
+      <nav class="navbar">
+        <h3 class="logo">Logo</h3>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menubar">
+          <span class="fa fa-bars"></span>
+        </label>
+        <ul>
+          <a href="#about"><li>Sign up/Login</li></a>
+          <a href="#skills"><li>Dark mod</li></a>
+        </ul>
+      </nav>
     </header>
     <main>
       <!-- jafar - start - hero section -->
@@ -42,6 +50,84 @@
       </div>
       <!-- jafar - end - hero section -->
       <!-- manar- start - registration/login -->
+
+      <div class="registerContainer">
+        <input type="checkbox" id="check" aria-hidden="true" />
+
+        <div class="signup">
+          <form>
+            <label for="check" class="label" id="signLab" aria-hidden="true"
+              >SIGN UP</label
+            >
+            <label class="inputDesign">
+              <input
+                type="text"
+                class="regInput"
+                name="fName"
+                id="fName"
+                placeholder="First Name"
+                required
+              />
+            </label>
+            <label class="inputDesign">
+              <input
+                type="text"
+                class="regInput"
+                name="lName"
+                id="lName"
+                placeholder="Last Name"
+                required
+              />
+            </label>
+            <label class="inputDesign">
+              <input
+                type="email"
+                name="email"
+                class="regInput"
+                id="signEmail"
+                placeholder="Email"
+                required
+              />
+            </label>
+            <label class="inputDesign">
+              <input
+                type="password"
+                name="password"
+                class="regInput"
+                id="signPassword"
+                placeholder="Password"
+                required
+              />
+            </label>
+            <button type="submit" id="signup" class="regBtn">sign-up</button>
+          </form>
+        </div>
+
+        <div class="login">
+          <label for="check" id="logLab" class="label" aria-hidden="true"
+            >LOG IN</label
+          >
+          <label class="inputDesign"></label>
+          <input
+            type="email"
+            class="regInput"
+            name="email"
+            id="logEmail"
+            placeholder="Email"
+            required
+          />
+          <label class="inputDesign"></label>
+          <input
+            type="password"
+            name="password"
+            class="regInput"
+            id="logPassword"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" id="login" class="regBtn">log-in</button>
+        </div>
+      </div>
 
       <!-- manar - end - registration/login -->
     </main>

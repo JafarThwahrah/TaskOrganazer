@@ -15,64 +15,114 @@
   </head>
   <body>
     <header>
-      <!-- emad - start -->
+        <!-- emad - start -->
 
-      <!-- emad - end -->
-    </header>
-    <main>
-      <!-- laith - start - form -->
 
+		<!-- emad - end -->
+		</header>
+		<main>
+			<!-- laith - start - form -->
+			<div style="border: 2px solid;border-radius:20px"><br>
+			<form action="" id="newTaskForm" class="container">
+			<div class="row">
+				<div class="col-6">
+					<label for="Title" class="form-label">Task title</label>
+					<input type="text" class="form-control" id="Title" name="Title" placeholder="Write a title for your task">
+				  </div>
+				  <div class="col-6">
+					<label for="Description" class="form-label">Task description</label>
+					<input type="text" class="form-control" id="Description" name="Description" placeholder="Enter a descriptionc(optional)">
+				  </div>
+				</div><br>
+				<div>
+					<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="Radio" id="Radio1" value="Critical">
+					<label class="form-check-label" for="Radio1">Critical</label>
+				  </div>
+				  <div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="Radio" id="Radio2" value="Normal">
+					<label class="form-check-label" for="Radio2">Normal</label>
+				  </div>
+				  <div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="Radio" id="Radio3" value="Low priority">
+					<label class="form-check-label" for="Radio3">Low priority</label>
+				  </div>
+				</div><br>
+				  <button type="submit" class="btn btn-primary" >Save</button>
+			</form><br>
+		</div>
       <!-- laith - end - form -->
 
       <!-- jafar - start - dropdowns -->
 
-      <div class="dropdown">
+      <div class="dropdown" id="filterByStatus">
         <input
           type="text"
           data-dropdpwn-button
-          class="textBox"
-          placeholder="Filter"
+          class="textBox1"
+          value="Filter by Priority..."
+          readonly
+        />
+        <div class="options" data-dropdown>
+        
+          <hr class="dropdown-divider" />
+          <h4 class="dropdown-header">Filter by Priority</h4>
+          <div onclick="show1('Critical')" id="CriticalDropdown">Critical</div>
+          <div onclick="show1('Normal')" id="MediumDropdown">Normal</div>
+          <div onclick="show1('Low priority')" id="LowPrioritDropdown">
+            Low priority
+          </div>
+          <hr/>
+          <div class="text-center" onclick="show1('Filter...')" id="RefreshFilter1">
+Reset Filter </div>
+        </div>
+      </div>
+
+<!-- second filter srart here dropdowns -->
+      
+      <div class="dropdown" id="filterByPriority">
+        <input
+          type="text"
+          class="textBox2"
+          value="Filter by Status..."
+          id="TextBox2"
           readonly
         />
         <div class="options" data-dropdown>
           <h4 class="dropdown-header">Filter by Status</h4>
           <div
-            onclick="show('Incomplete')"
+            onclick="show2('Incomplete')"
             id="InCompleteDropdown"
-            name="Pending"
           >
             Incomplete
           </div>
-          <div onclick="show('Completed')" id="completedDropdown">
+          <div onclick="show2('Completed')" id="completedDropdown">
             Completed
           </div>
-          <hr class="dropdown-divider" />
-          <h4 class="dropdown-header">Filter by Priority</h4>
-          <div onclick="show('Critical')" id="CriticalDropdown">Critical</div>
-          <div onclick="show('Medium')" id="MediumDropdown">Medium</div>
-          <div onclick="show('Low Priority')" id="LowPrioritDropdown">
-            Low Priority
-          </div>
+          <hr/>
+          <div class="text-center" onclick="show2('Filter...')" id="RefreshFilter2">
+Reset Filter </div>
         </div>
       </div>
 
-      <!-- <li></li> -->
-      <!-- jafar - end - dropdowns -->
 
-      <!-- duaa - start - saved task -->
+			<!-- duaa - start - saved task -->
+			<section id="cards-container">
+				<div class="container p-5">
+					<div class="row g-4" id="card-row"></div>
+				</div>
+			</section>
+			<!-- duaa - end - saved task -->
+		</main>
+		<footer>
+			<!-- emad - start -->
+			<!-- emad - end -->
 
-      <!-- duaa - end - saved task -->
+
+
+    
     </main>
-    <footer>
-      <!-- emad - start -->
-
-      <!-- emad - end -->
-    </footer>
-    <!-- <script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-			crossorigin="anonymous"
-		></script> -->
+   
 
     <script
       type="module"
