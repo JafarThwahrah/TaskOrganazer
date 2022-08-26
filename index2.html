@@ -80,7 +80,7 @@ Reset Filter </div>
 
 <!-- second filter srart here dropdowns -->
       
-      <div class="dropdown" id="filterByPriority">
+      <div class="dropdown" id="filterByPriority" onChange="myNewFunction(this);">
         <input
           type="text"
           class="textBox2"
@@ -104,8 +104,18 @@ Reset Filter </div>
 Reset Filter </div>
         </div>
       </div>
+ 
+ 
+<select aria-placeholder="Filter by Status" class="form-select dropdown" aria-label="Default select example" onChange="getStatus(this);">
+   <option value="2">Completed</option>
+  <option value="1">incomplete</option>
+ </select>
 
-
+<select aria-placeholder="Filter by Priority" class="form-select dropdown" aria-label="Default select example" onChange="getPriority(this);">
+  <option value="1">Critical</option>
+  <option value="2">Normal</option>
+  <option value="3">Low priority</option>
+</select>
 			<!-- duaa - start - saved task -->
 			<section id="cards-container">
 				<div class="container p-5">
